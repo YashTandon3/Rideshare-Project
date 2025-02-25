@@ -32,7 +32,18 @@ public class Car {
     public boolean hasRoom(){
         return passengers.size()<3;
     }
+    public void move(){
+        if(currentLocation == destination){
+            return; //kick out early before trying to move
+        }
 
+        if(direction = true){
+            currentLocation++;
+        }
+        else{
+            currentLocation--;
+        }
+    }
     /** Method for handing back a person that is eligible to be dropped off.
      * This removes the person from the car as well.
      * There may be multiple people eligible for dropoff but this only returns one
