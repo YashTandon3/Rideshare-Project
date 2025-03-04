@@ -59,5 +59,9 @@ public class Car {
         return null;
     }
 
+    public int getLocation(){
+        return currentLocation;
+    }
+
 
 }

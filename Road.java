@@ -46,8 +46,24 @@ public class Road {
 
     }
 
+    //This is the big method that moves all cars, unloads and loads passengers for one tick
 
+    public void move(){
+        //unload all eligible people from cars
+        for(Car c: fleet){
+            Person p = c.unload(); //this gives an eligible person to remove or null if nobody is available.
+            if(p != null){
+                int location = c.getLocation();
+                stations[location].addPerson(p);
+            }
+        }
 
+        
+        //load all people from stations to cars
+
+       
+        //move all the cars
+    }
 
 
 
