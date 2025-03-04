@@ -52,7 +52,7 @@ public class Car {
     public Person unload(){
         for(int i = 0; i<passengers.size(); i++){
             Person a = passengers.get(i);
-            if(a.getDestination() == currentLocation){
+            if(a.getDestination() == currentLocation|| destination == currentLocation){
                 return passengers.remove(i);
             }
         }
