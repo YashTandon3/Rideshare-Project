@@ -35,6 +35,15 @@ public class Station {
 
     }
 
+    public Person nextRight(){
+        if(waitingRight.size()>0){
+            return waitingRight.remove(0);
+        } else{
+            return null;
+        }
+
+    }
+
     public int completedCount(){
         return completed.size();
     }
