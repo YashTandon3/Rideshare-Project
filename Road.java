@@ -106,7 +106,9 @@ public void loadSpecificCar(Car c){
         
         //load all people from stations to cars
         //going to be similar, but now looping through stations and putting in cars
-
+        for(Car c: fleet){
+            loadSpecificCar(c);
+        }
         
 
        
