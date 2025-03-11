@@ -46,25 +46,68 @@ public class Road {
 
     }
 
+private void unloadSpecificCar(Car c){
+
+
+    
+        while(true){
+        Person p = c.unload(); //this gives an eligible person to remove or null if nobody is available.
+        if(p != null){
+            int location = c.getLocation();
+            stations[location].addPerson(p);
+        } else{
+            break;
+            }
+        } 
+    }
+
+
+
+public void loadSpecificCar(Car c){
+    Station matchingStation = stations[c.getLocation()];
+    while(true){
+        if(c.hasRoom() == false){
+            break;
+        }
+
+        //figure out if the car is going right
+        if(c.getDirection() == true){
+            Person x = matchingStation.nextRight();
+            if(x == null){
+                break;
+            } else{
+                c.addPassenger(x);
+            }
+        }
+
+        else{
+            Person x = matchingStation.nextLeft();
+            if(x == null){
+                break;
+            } else{
+                c.addPassenger(x);
+            }
+        }
+        
+    }
+
+
+}
     //This is the big method that moves all cars, unloads and loads passengers for one tick
 
     public void move(){
         //unload all eligible people from cars
         for(Car c: fleet){
-            while(true){
-            Person p = c.unload(); //this gives an eligible person to remove or null if nobody is available.
-            if(p != null){
-                int location = c.getLocation();
-                stations[location].addPerson(p);
-            } else{
-                break;
-                }
-            } 
+            unloadSpecificCar(c);
         }
+
+        
 
         
         //load all people from stations to cars
         //going to be similar, but now looping through stations and putting in cars
+
+        
 
        
         //move all the cars
