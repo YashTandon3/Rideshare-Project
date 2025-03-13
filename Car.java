@@ -10,7 +10,7 @@ public class Car {
     public Car(int myDestination, int start){
         destination = myDestination;
         currentLocation = start;
-        direction = destination > currentLocation;
+        direction = (destination > currentLocation);
         passengers = new ArrayList<Person>();
     }
     

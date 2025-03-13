@@ -1,8 +1,17 @@
 public class Tester {
     public static void main(String[] args) {
         Road r = new Road();
-        System.out.println(r.toString());
-        r
+        r.populateCars(3);
+        r.populateStations(4);
+        r.toString();
+        r.move();
+        r.move();
+        r.move();
+        r.move();
+        r.move();
+        r.move();
+        r.move();
+
 
 
 

@@ -4,7 +4,7 @@ public class Road {
     private Station[] stations;
     private ArrayList<Car> fleet = new ArrayList <Car>();
 
-    private static final int NUMSTATIONS = 10;
+    private static final int NUMSTATIONS = 15;
 
     public Road(){
         stations = new Station [NUMSTATIONS];
@@ -32,7 +32,7 @@ public class Road {
     }
 
     public String toString(){
-        String s = "Stationns:\n";
+        String s = "Station:\n";
         for(Station st : stations){
             s+= st.toString();
             s+="\n";

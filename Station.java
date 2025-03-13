@@ -48,11 +48,19 @@ public class Station {
         return completed.size();
     }
 
+    public int RightCount(){
+        return waitingRight.size();
+    }
+
+    public int leftCount(){
+        return waitingLeft.size();
+    }
+
     public String toString(){
         String s = "Station: " + number + "\n";
-        s+= "leftbound: " + waitingLeft.toString() + "\n";
-        s+= "Rightbound: " + waitingRight.toString() + "\n";
-        s+= "Completed: " + completed.toString() + "\n";
+        s+= "leftbound: " + leftCount() + "\n";
+        s+= "Rightbound: " + RightCount() + "\n";
+        s+= "Completed: " + completedCount() + "\n";
         return s;
     }
 }
