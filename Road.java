@@ -4,7 +4,7 @@ public class Road {
     private Station[] stations;
     private ArrayList<Car> fleet = new ArrayList <Car>();
 
-    private static final int NUMSTATIONS = 15;
+    private static final int NUMSTATIONS = 32;
 
     public Road(){
         stations = new Station [NUMSTATIONS];
@@ -117,6 +117,16 @@ public void loadSpecificCar(Car c){
             c.move();
         }
     }
+
+    public int numComplete(){
+        int sum = 0;
+        for(Station st : stations){
+            sum += st.completedCount();
+        }
+        return sum;
+    }
+
+    
 
 
 

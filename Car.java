@@ -37,7 +37,7 @@ public class Car {
             return; //kick out early before trying to move
         }
 
-        if(direction = true){
+        if(direction == true){
             currentLocation++;
         }
         else{

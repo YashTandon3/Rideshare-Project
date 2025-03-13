@@ -28,7 +28,7 @@ public class Station {
 
     public Person nextLeft(){
         if(waitingLeft.size()>0){
-            return waitingRight.remove(0);
+            return waitingLeft.remove(0);
         } else{
             return null;
         }
