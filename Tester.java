@@ -4,6 +4,7 @@ public class Tester {
         r.populateCars(20);
         r.populateStations(50);
         System.out.println(r.toString());
+       
         r.move();
         r.move();
         r.move();
@@ -36,37 +37,7 @@ public class Tester {
         r.move();
         r.move();
         r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
-        r.move();
+ 
         System.out.println(r.toString());
         System.out.println(r.numComplete());
 
